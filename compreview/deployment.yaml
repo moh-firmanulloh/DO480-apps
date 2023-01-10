@@ -21,5 +21,12 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: central-quay-registry.apps.ocp4.example.com/cloudadmin/hello-app:latest
+        image: central-quay-registry.apps.ocp4.example.com/cloudadmin/hello-app:v11
+        resources:
+          requests:
+            cpu: 100m
+            mem: 100mi
+          limits:
+            cpu: 200m
+            mem: 500mi
 ---
